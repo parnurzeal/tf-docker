@@ -3,5 +3,6 @@
 docker run \
   -it \
   -p 8888:8888 \
-  --mount type=bind,source="$(pwd)",target=/notebooks/saved \
+  -p 8000:8000 \
+  --mount type=bind,source="$(pwd)/notebooks",target=/notebooks/saved \
   mytf
